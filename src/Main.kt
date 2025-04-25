@@ -30,8 +30,7 @@ fun mainList() {
     shapes.remove("pentagon");
     println(shapes)
 }
-
-fun main() {
+fun mainSet() {
     //Whereas lists are ordered and allow duplicate items, sets are unordered and only store unique items.
     val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry");//only one cherry is included in the list
     println(readOnlyFruit);
@@ -56,5 +55,10 @@ fun main() {
     println(fruit);
     fruit.remove("unknonw");//no error when used for item not in the set
     println(fruit);
+
+}
+
+fun main() {
+
 
 }
