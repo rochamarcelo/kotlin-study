@@ -1,6 +1,8 @@
+import kotlin.random.Random
+
 var debug = true;//this is a top-level. Variables can be declared outside the main() function at the beginning of your program. Variables declared in this way are said to be declared at top level.
 
-fun main() {
+fun mainConditional() {
     //If you have to choose between if and when, we recommend using when because it:
     //
     // - Makes your code easier to read.
@@ -54,4 +56,32 @@ fun main() {
     }
     println(trafficAction2);
     //Using when with a subject makes your code easier to read and maintain. When you use a subject with a when expression, it also helps Kotlin check that all possible cases are covered. Otherwise, if you don't use a subject with a when expression, you need to provide an else branch.
+}
+fun main() {
+    //Exercise 1
+    //Create a simple game where you win if throwing two dice results in the same number.
+    // Use if to print You win :) if the dice match or You lose :( otherwise.
+    val firstResult = Random.nextInt(6);
+    val secondResult = Random.nextInt(6);
+    if (firstResult == secondResult) {
+        println("You win :)");
+    } else {
+        println("You lose :(");
+    }
+    //Exercise 2
+    //Using a when expression, update the following program so that
+    // it prints the corresponding actions when you input the names
+    // of game console buttons.
+    val button = "A";
+    println(
+        when (button) {
+            "A" -> "Yes";
+            "B" -> "No";
+            "X" -> "Menu";
+            "Y" -> "Nothing";
+            else -> "There is no such button";
+        }
+    );
+
+
 }
