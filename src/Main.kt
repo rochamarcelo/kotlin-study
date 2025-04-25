@@ -1,3 +1,5 @@
+import kotlin.math.PI
+
 var debug = true;//this is a top-level. Variables can be declared outside the main() function at the beginning of your program. Variables declared in this way are said to be declared at top level.
 
 //You can declare your own functions in Kotlin using the fun keyword.
@@ -40,6 +42,10 @@ fun registerUser(username: String, email: String): String {
     return "User registered successfully: $username"
 }
 
+fun circleArea(radius: Int): Double {
+    return PI * radius * radius
+}
+fun cirAreaSimple(radius: Int): Double = PI * radius * radius;
 fun main() {
     hello();
     println(sum(1, 2));
@@ -59,4 +65,7 @@ fun main() {
     // Username already taken. Please choose a different username.
     println(registerUser("new_user", "newuser@example.com"))
     println(registerUser("new_user", "newuser@example.com"));
+
+    println(circleArea(2));
+    println(cirAreaSimple(2));
 }
