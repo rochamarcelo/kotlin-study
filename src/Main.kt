@@ -33,9 +33,28 @@ fun mainList() {
 
 fun main() {
     //Whereas lists are ordered and allow duplicate items, sets are unordered and only store unique items.
-    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry");
-    println(readOnlyFruit)
+    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry");//only one cherry is included in the list
+    println(readOnlyFruit);
     val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry");
+    //You can see in the previous example that because sets only contain unique elements, the duplicate "cherry" item is dropped.
+    println(fruit);
+
+    //To prevent unwanted modifications, you can create a read-only view of a mutable set by assigning it to a Set:
+    val fruitLocked: Set<String> = fruit;
+    println(fruit);
+
+    //As sets are unordered, you can't access an item at a particular index.
+    println("This set has ${readOnlyFruit.count()} items.");
+
+    //To check that an item is in a set, use the in operator:
+    println("banana" in readOnlyFruit);
+    //To add or remove items from a mutable set, use .add() and .remove() functions respectively:
+    fruit.add("dragonfruit");
+    println(fruit);
+
+    fruit.remove("dragonfruit");
+    println(fruit);
+    fruit.remove("unknonw");//no error when used for item not in the set
     println(fruit);
 
 }
