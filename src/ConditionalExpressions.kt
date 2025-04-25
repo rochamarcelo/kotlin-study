@@ -55,7 +55,7 @@ fun mainConditional() {
     println(trafficAction2);
     //Using when with a subject makes your code easier to read and maintain. When you use a subject with a when expression, it also helps Kotlin check that all possible cases are covered. Otherwise, if you don't use a subject with a when expression, you need to provide an else branch.
 }
-fun exercises() {
+fun conditionalExercises() {
     //Exercise 1
     //Create a simple game where you win if throwing two dice results in the same number.
     // Use if to print You win :) if the dice match or You lose :( otherwise.

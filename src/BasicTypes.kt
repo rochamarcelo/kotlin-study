@@ -51,7 +51,7 @@ fun mainBasicTypes() {
 
 }
 
-fun basicTypExercise() {
+fun basicTypesExercise() {
     val a: Int = 1000
     val b: String = "log message"
     val c: Double = 3.14

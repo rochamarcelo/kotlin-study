@@ -98,7 +98,7 @@ fun mainMap() {
     println(100 in readOnlyJuiceMenu.values);//true
     println(200 in readOnlyJuiceMenu.values);//false
 }
-fun mainExercises() {
+fun collectionsExercises() {
     //Exercise 1
     val greenNumbers = listOf(1, 4, 23);
     val redNumbers = listOf(17, 2);
