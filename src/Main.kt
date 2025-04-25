@@ -81,7 +81,12 @@ fun main() {
     println("This list has ${readOnlyShapes.count()} items")
     //To check that an item is in a list, use the in operator
     println("circle" in readOnlyShapes);//true
-    println("rectangle" in readOnlyShapes);
+    println("rectangle" in readOnlyShapes);//false
+    //To add or remove items from a mutable list, use .add() and .remove() functions respectively:
+    shapes.add("pentagon");
+    println(shapes);
+    shapes.remove("pentagon");
+    println(shapes)
 
 
 }
