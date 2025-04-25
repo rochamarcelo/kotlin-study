@@ -32,7 +32,10 @@ fun mainList() {
 }
 
 fun main() {
-
-
+    //Whereas lists are ordered and allow duplicate items, sets are unordered and only store unique items.
+    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry");
+    println(readOnlyFruit)
+    val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry");
+    println(fruit);
 
 }
