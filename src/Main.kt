@@ -59,6 +59,48 @@ fun mainSet() {
 }
 
 fun main() {
+    //The easiest way to create maps is to use to between each key and its related value:
+    val readOnlyJuiceMenu = mapOf("apple" to 100, "kiwi" to 190, "orange" to 100);
+    println(readOnlyJuiceMenu);
+
+    // Mutable map with explicit type declaration
+    val juiceMenu: MutableMap<String, Int> = mutableMapOf("apple" to 100, "kiwi" to 190, "orange" to 100);
+    println(juiceMenu);
+    //To prevent unwanted modifications, you can create a read-only view of a mutable map by assigning it to a Map:
+    val juiceMenuLocked: Map<String, Int> = juiceMenu;
+    println(juiceMenuLocked);
+    println("The value of apple juice is: ${readOnlyJuiceMenu["apple"]}");
+    println("The value of kiwi juice is: ${readOnlyJuiceMenu["kiwi"]}");
+    println("The value of unknown juice is: ${readOnlyJuiceMenu["unknown"]}");//Null when key does not exists
+
+    //You can also use the indexed access operator [] to add items to a mutable map:
+    juiceMenu["coconut"] = 150;
+    println(juiceMenu);
+    println("The value of coconut juice is ${juiceMenu["coconut"]}");
+    //To remove items from a mutable map, use the .remove() function:
+    juiceMenu.remove("coconut");
+    println(juiceMenu);
+    println("The value of coconut juice is ${juiceMenu["coconut"]}");
+
+    //To get the number of items in a map, use the .count() function:
+    println("This map has ${juiceMenu.count()} key-value pairs");
+    //To check if a specific key is already included in a map, use the .containsKey() function:
+    println(readOnlyJuiceMenu.containsKey("kiwi"));//true
+    println(readOnlyJuiceMenu.containsKey("coconut"));
+
+    //To obtain a collection of the keys or values of a map, use the keys and values properties respectively:
+    println(readOnlyJuiceMenu.keys);
+    println(readOnlyJuiceMenu.values);
+    //To check that a key or value is in a map, use the in operator:
+    println("orange" in readOnlyJuiceMenu.keys);//true
+    println("dragonfruit" in readOnlyJuiceMenu.keys);//false
+    // Alternatively, you don't need to use the keys property
+    println("orange" in readOnlyJuiceMenu);//true
+    println("dragonfruit" in readOnlyJuiceMenu);//false
+
+    println(100 in readOnlyJuiceMenu.values);//true
+    println(200 in readOnlyJuiceMenu.values);//false
+
 
 
 }
