@@ -58,7 +58,7 @@ fun mainSet() {
 
 }
 
-fun main() {
+fun mainMap() {
     //The easiest way to create maps is to use to between each key and its related value:
     val readOnlyJuiceMenu = mapOf("apple" to 100, "kiwi" to 190, "orange" to 100);
     println(readOnlyJuiceMenu);
@@ -100,7 +100,21 @@ fun main() {
 
     println(100 in readOnlyJuiceMenu.values);//true
     println(200 in readOnlyJuiceMenu.values);//false
+}
+fun main() {
+    //Exercise 1
+    val greenNumbers = listOf(1, 4, 23);
+    val redNumbers = listOf(17, 2);
+    val totalNumbers = greenNumbers.count() + redNumbers.count();
+    println("There are ${totalNumbers} numbers in total");
 
-
-
+    //Exercise 2
+    val SUPPORTED = setOf("HTTP", "HTTPS", "FTP");
+    val requested = "smtp";
+    val isSupported = requested.uppercase() in SUPPORTED;
+    println("Support for $requested: $isSupported");
+    //Exercise 3
+    val number2word = mapOf(1 to "One", 2 to "Two", 3 to "Three");// Write your code here
+    val n = 2
+    println("$n is spelt as '${number2word[n]}'");
 }
