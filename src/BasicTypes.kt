@@ -1,4 +1,4 @@
-
+var debug = true;//this is a top-level. Variables can be decl;
 fun mainBasicTypes() {
     println("Hello World!")
 
