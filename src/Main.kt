@@ -1,3 +1,3 @@
-Kfun main() {
+fun main() {
 
 }
