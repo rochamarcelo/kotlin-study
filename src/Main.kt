@@ -1,5 +1,57 @@
 var debug = true;//this is a top-level. Variables can be declared outside the main() function at the beginning of your program. Variables declared in this way are said to be declared at top level.
 
 fun main() {
+    //If you have to choose between if and when, we recommend using when because it:
+    //
+    // - Makes your code easier to read.
+    // - Makes it easier to add another branch.
+    // - Leads to fewer mistakes in your code.
+    val d: Int;
+    val check= true;
+    if (check) {
+        d = 1;
+    } else {
+        d = 2;
+    }
+    println(d);
 
+    //There is no ternary operator condition ? then : else in Kotlin. Instead, if can be used as an expression. If there is only one line of code per action, the curly braces {} are optional:
+    val a = 1;
+    val b =  2;
+    println(if (a > b) a else b);
+
+    //Use when when you have a conditional expression with multiple branches.
+    //Use -> in each branch to separate each check from the action to take if the check is successful.
+    val obj = "Hello";
+    when (obj) {
+        "1" -> println("One");
+        "Hello" -> println("Greeting");
+        else -> println("Unknown");
+    }
+    //An expression returns a value that can be used later in your code.
+    val result = when (obj) {
+        "1" -> "One";
+        "Hello" -> "Greeting";
+        else -> "Unknown";
+    }
+    println(result);
+
+    //This example uses a when expression without a subject to check a chain of Boolean expressions:
+    val trafficLightState = "Red";
+    val trafficAction = when {
+        trafficLightState == "Green" -> "Go";
+        trafficLightState == "Yellow" -> "Slow down";
+        trafficLightState == "Red" -> "Stop";
+        else -> "Malfunction";
+    }
+    println(trafficAction);
+    //However, you can have the same code but with trafficLightState as the subjec
+    val trafficAction2 = when (trafficLightState) {
+        "Green" -> "Go"
+        "Yellow" -> "Slow down"
+        "Red" -> "Stop"
+        else -> "Malfunction"
+    }
+    println(trafficAction2);
+    //Using when with a subject makes your code easier to read and maintain. When you use a subject with a when expression, it also helps Kotlin check that all possible cases are covered. Otherwise, if you don't use a subject with a when expression, you need to provide an else branch.
 }
