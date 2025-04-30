@@ -1,3 +1,5 @@
+package kotlinTour.lambda
+
 fun toSeconds(time: String): (Int) -> Int = when (time) {
     "hour" -> { value -> value * 60 * 60 }
     "minute" -> { value -> value * 60 }
@@ -13,7 +15,7 @@ fun repeatN(n: Int, action: () -> Unit) {
     }
 }
 
-fun lambda() {
+fun main() {
     val upperCaseString = {text: String -> text.uppercase()};
     println(upperCaseString("hello"));
     println("hello");
