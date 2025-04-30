@@ -1,3 +1,5 @@
+package kotlinTour.collections
+
 fun mainList() {
     //Read only list
     val readOnlyShapes = listOf("triangle", "square", "circle");
@@ -55,7 +57,7 @@ fun mainSet() {
 
 }
 
-fun mainMap() {
+fun main() {
     //The easiest way to create maps is to use to between each key and its related value:
     val readOnlyJuiceMenu = mapOf("apple" to 100, "kiwi" to 190, "orange" to 100);
     println(readOnlyJuiceMenu);
@@ -97,6 +99,7 @@ fun mainMap() {
 
     println(100 in readOnlyJuiceMenu.values);//true
     println(200 in readOnlyJuiceMenu.values);//false
+    collectionsExercises();
 }
 fun collectionsExercises() {
     //Exercise 1
