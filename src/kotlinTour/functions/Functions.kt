@@ -1,3 +1,5 @@
+package kotlinTour.functions
+
 import kotlin.math.PI
 
 //You can declare your own functions in Kotlin using the fun keyword.
@@ -44,7 +46,8 @@ fun circleArea(radius: Int): Double {
     return PI * radius * radius
 }
 fun cirAreaSimple(radius: Int): Double = PI * radius * radius;
-fun mainFunctions() {
+
+fun main() {
     hello();
     println(sum(1, 2));
     printMessageWithPrefix("Hello", "Log")

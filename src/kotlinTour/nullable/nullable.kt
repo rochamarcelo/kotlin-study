@@ -1,3 +1,7 @@
+package kotlinTour.nullable
+
+import Employee
+
 fun describeString(maybeString: String?): String {
     if (maybeString != null && maybeString.length > 0) {
         return "String of length ${maybeString.length}"
@@ -16,7 +20,7 @@ fun employeeById(id: Int) = when(id) {
 
 fun salaryById(id: Int) = employeeById(id)?.salary ?: 0;
 
-fun mainNullable() {
+fun main() {
 // neverNull has String type
     var neverNull: String = "This can't be null"
 
@@ -56,6 +60,4 @@ fun mainNullable() {
     println(nullString?.length ?: 0);
     //Exercise
     println((1..5).sumOf { id -> salaryById(id) })
-
-
 }
