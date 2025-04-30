@@ -1,4 +1,4 @@
-package practice.movieTicketPrice
+package kotlinFundamentals.practice.movieTicketPrice
 
 fun main() {
     val child = 5

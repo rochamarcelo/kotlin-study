@@ -1,4 +1,4 @@
-package practice.foldablePhones
+package kotlinFundamentals.practice.foldablePhones
 
 class FoldablePhone constructor(isOn: Boolean = false, private var isFolded: Boolean = false): Phone(isScreenLightOn = isOn) {
     override fun switchOn() {

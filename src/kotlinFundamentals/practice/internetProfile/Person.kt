@@ -1,4 +1,4 @@
-package practice.internetProfile
+package kotlinFundamentals.practice.internetProfile
 
 class Person(val name: String, val age: Int, val hobby: String?, val referrer: Person?) {
     fun getReferrerText(): String {

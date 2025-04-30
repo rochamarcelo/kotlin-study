@@ -1,4 +1,4 @@
-package practice.foldablePhones
+package kotlinFundamentals.practice.foldablePhones
 
 open class Phone(var isScreenLightOn: Boolean = false){
     open fun switchOn() {

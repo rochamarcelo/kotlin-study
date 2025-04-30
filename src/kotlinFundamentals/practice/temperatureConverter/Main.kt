@@ -1,4 +1,4 @@
-package practice.temperatureConverter
+package kotlinFundamentals.practice.temperatureConverter
 
 fun main() {
     printFinalTemperature(

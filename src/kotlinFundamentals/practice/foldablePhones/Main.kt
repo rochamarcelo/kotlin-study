@@ -1,4 +1,4 @@
-package practice.foldablePhones
+package kotlinFundamentals.practice.foldablePhones
 
 fun main() {
     val phone = Phone();

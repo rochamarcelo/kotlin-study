@@ -1,4 +1,4 @@
-package practice.songCatalog
+package kotlinFundamentals.practice.songCatalog
 
 fun main() {
     val song1 = Song("Gothan kotlinTour.classes.City", "Camisa de Venus", 1985, 1000000);

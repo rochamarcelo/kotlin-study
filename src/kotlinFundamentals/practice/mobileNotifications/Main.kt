@@ -1,4 +1,4 @@
-package practice.mobileNotifications
+package kotlinFundamentals.practice.mobileNotifications
 
 fun main() {
     val morningNotification = 51

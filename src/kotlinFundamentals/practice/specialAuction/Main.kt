@@ -1,4 +1,4 @@
-package practice.specialAuction
+package kotlinFundamentals.practice.specialAuction
 
 fun main() {
     val winningBid = Bid(5000, "Private Collector")

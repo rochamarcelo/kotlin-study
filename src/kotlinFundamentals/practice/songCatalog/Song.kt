@@ -1,4 +1,4 @@
-package practice.songCatalog
+package kotlinFundamentals.practice.songCatalog
 
 class Song(val title: String, val artist: String, val yearPublished: Int, var playCount: Int) {
     val isPopular : Boolean
