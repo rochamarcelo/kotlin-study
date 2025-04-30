@@ -1,6 +1,6 @@
+package kotlinTour.classes
 
-
-fun classes() {
+fun main() {
     val contact = Contact(1, "mary@example.com");
     println(contact.email);
     println(contact.category);

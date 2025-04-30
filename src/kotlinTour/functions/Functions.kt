@@ -39,7 +39,7 @@ fun registerUser(username: String, email: String): String {
     registeredUsernames.add(username)
     registeredEmails.add(email)
 
-    return "User registered successfully: $username"
+    return "kotlinTour.classes.User registered successfully: $username"
 }
 
 fun circleArea(radius: Int): Double {

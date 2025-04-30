@@ -14,7 +14,7 @@ class Person(val name: String, val age: Int, val hobby: String?, val referrer: P
         return "Doesn't have a hobby."
     }
     fun showProfile() {
-        println("Name: $name");
+        println("kotlinTour.classes.Name: $name");
         println("Age: $age");
         println("${getHobbyText()} ${getReferrerText()}")
         println("")

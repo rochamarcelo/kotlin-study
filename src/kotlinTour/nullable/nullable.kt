@@ -1,6 +1,6 @@
 package kotlinTour.nullable
 
-import Employee
+import kotlinTour.classes.Employee
 
 fun describeString(maybeString: String?): String {
     if (maybeString != null && maybeString.length > 0) {

@@ -1,7 +1,7 @@
 package practice.songCatalog
 
 fun main() {
-    val song1 = Song("Gothan City", "Camisa de Venus", 1985, 1000000);
+    val song1 = Song("Gothan kotlinTour.classes.City", "Camisa de Venus", 1985, 1000000);
     song1.printDescription();
     println("Song played ${song1.playCount} times. Is song popular? ${song1.isPopular}");
 
