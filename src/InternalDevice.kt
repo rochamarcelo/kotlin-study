@@ -1,0 +1,2 @@
+class InternalDevice internal constructor() {
+}
