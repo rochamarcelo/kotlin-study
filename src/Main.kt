@@ -1,3 +1,4 @@
+import cart.Product
 
 fun main() {
     val tv = SmartTvDevice(deviceName = "Android TV", deviceCategory = "Entertainment");
@@ -30,5 +31,13 @@ fun main() {
     smartHome.turnOnLight()
     smartHome.increaseLightBrightness();
     smartHome.turnOffAllDevices();
+    smartHome.printAllDevicesInfo();
+    smartHome.turnOnAllDevices()
+    smartHome.printAllDevicesInfo();
+    smartHome.decreaseTvVolume();
+    smartHome.changeTvChannelToPrevious();
+    smartHome.printSmartTvInfo();
+    smartHome.printSmartLightInfo();
+    smartHome.decreaseLightBrightness();
 
 }

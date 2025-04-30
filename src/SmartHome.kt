@@ -1,40 +1,89 @@
 class SmartHome (val smartTvDevice: SmartTvDevice, val smartLightDevice: SmartLightDevice) {
     var deviceTurnOnCount = 0
-        private set
-    private var myCount = 0;
     fun turnOnTv() {
-        deviceTurnOnCount++
-        smartTvDevice.turnOn();
-        smartTvDevice.increaseSpeakerVolume()
+        if (!smartTvDevice.isOn()) {
+            deviceTurnOnCount++
+            smartTvDevice.turnOn();
+            smartTvDevice.increaseSpeakerVolume()
+        }
     }
     fun turnOffTv() {
-        deviceTurnOnCount--
-        smartTvDevice.turnOff()
+        if (smartTvDevice.isOn()) {
+            deviceTurnOnCount--
+            smartTvDevice.turnOff()
+        }
     }
     fun increaseTvVolume() {
-        smartTvDevice.increaseSpeakerVolume()
+        if (smartTvDevice.isOn()) {
+            smartTvDevice.increaseSpeakerVolume()
+        }
     }
 
     fun changeTvChannelToNext() {
-        smartTvDevice.nextChannel()
+        if (smartTvDevice.isOn()) {
+            smartTvDevice.nextChannel();
+        }
     }
 
     fun turnOnLight() {
-        deviceTurnOnCount++
-        smartLightDevice.turnOn()
+        if (!smartLightDevice.isOn()) {
+            deviceTurnOnCount++
+            smartLightDevice.turnOn()
+        }
     }
 
     fun turnOffLight() {
-        deviceTurnOnCount--
-        smartLightDevice.turnOff()
+        if (smartLightDevice.isOn()) {
+            deviceTurnOnCount--
+            smartLightDevice.turnOff()
+        }
     }
 
     fun increaseLightBrightness() {
-        smartLightDevice.increaseBrightness()
+        if (smartLightDevice.isOn()) {
+            smartLightDevice.increaseBrightness();
+        }
     }
 
     fun turnOffAllDevices() {
         turnOffTv()
         turnOffLight()
+    }
+    fun turnOnAllDevices() {
+        turnOnTv()
+        turnOnLight()
+    }
+    fun decreaseTvVolume() {
+        if (smartTvDevice.isOn()) {
+            smartTvDevice.decreaseSpeakerVolume();
+        }
+    }
+    fun changeTvChannelToPrevious() {
+        if (smartTvDevice.isOn()) {
+            smartTvDevice.previousChannel();
+        }
+    }
+    fun printSmartTvInfo() {
+        if (smartTvDevice.isOn()) {
+            smartTvDevice.printDeviceInfo();
+        } else {
+            println("Smart tv devise is offline");
+        }
+    }
+    fun printSmartLightInfo() {
+        if (smartLightDevice.isOn()) {
+            smartLightDevice.printDeviceInfo();
+        } else {
+            println("Smart light devise is offline");
+        }
+    }
+    fun decreaseLightBrightness() {
+        if (smartLightDevice.isOn()) {
+            smartLightDevice.decreaseBrightness();
+        }
+    }
+    fun printAllDevicesInfo() {
+        printSmartLightInfo();
+        printSmartTvInfo();
     }
 }

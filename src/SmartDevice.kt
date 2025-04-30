@@ -22,4 +22,10 @@ open class SmartDevice (val name: String, val category: String) {
         println("Smart device is turned off.")
         deviceStatus = "offline";
     }
+    fun printDeviceInfo() {
+        println("Device name: $name , category: $category, type: $deviceType");
+    }
+    fun isOn(): Boolean {
+        return deviceStatus == "online";
+    }
 }
