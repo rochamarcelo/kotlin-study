@@ -1,5 +1,7 @@
+package kotlinTour.basicTypes
+
 var debug = true;//this is a top-level. Variables can be decl;
-fun mainBasicTypes() {
+fun main() {
     println("Hello World!")
 
     val popcornd = 5;//val means read-only variable

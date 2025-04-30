@@ -1,6 +1,8 @@
+package kotlinTour.conditionalExpressions
+
 import kotlin.random.Random
 
-fun mainConditional() {
+fun main() {
     //If you have to choose between if and when, we recommend using when because it:
     //
     // - Makes your code easier to read.
@@ -54,6 +56,7 @@ fun mainConditional() {
     }
     println(trafficAction2);
     //Using when with a subject makes your code easier to read and maintain. When you use a subject with a when expression, it also helps Kotlin check that all possible cases are covered. Otherwise, if you don't use a subject with a when expression, you need to provide an else branch.
+    conditionalExercises();
 }
 fun conditionalExercises() {
     //Exercise 1
