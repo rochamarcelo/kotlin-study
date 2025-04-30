@@ -1,3 +1,5 @@
+package kotlinFundamentals
+
 class SmartLightDevice(deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
     override val deviceType = "Smart Light";

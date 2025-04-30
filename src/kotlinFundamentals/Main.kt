@@ -1,4 +1,6 @@
-fun mainClassesExtra() {
+package kotlinFundamentals
+
+fun main() {
     val tv = SmartTvDevice(deviceName = "Android TV", deviceCategory = "Entertainment");
 //    println("Status ${tv.deviceStatus}");
 //    tv.turnOn();

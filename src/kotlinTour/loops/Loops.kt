@@ -1,4 +1,6 @@
-fun mainLoops() {
+package kotlinTour.loops
+
+fun main() {
     println(1..4);
     println(1..<4);
     println(4 downTo 1);
@@ -29,6 +31,8 @@ fun mainLoops() {
         println("Bake a cake");
         cakesBaked++;
     } while(cakesBaked < cakesEaten);
+
+    loopExercises();
 }
 fun loopExercises() {
     //Exercise 1

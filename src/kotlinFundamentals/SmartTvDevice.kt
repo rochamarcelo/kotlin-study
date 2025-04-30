@@ -1,3 +1,5 @@
+package kotlinFundamentals
+
 class SmartTvDevice (deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
     override val deviceType = "Smart TV"

@@ -1,3 +1,5 @@
+package kotlinFundamentals
+
 class SmartHome (val smartTvDevice: SmartTvDevice, val smartLightDevice: SmartLightDevice) {
     var deviceTurnOnCount = 0
     fun turnOnTv() {
