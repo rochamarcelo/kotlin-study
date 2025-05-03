@@ -1,5 +1,12 @@
 package moreKotlinFundamentals.practice
 
+val Event.durationOfEvent: String
+    get() {
+        if (durationInMinutes < 60) {
+            return "short";
+        }
+        return "long";
+    }
 fun main() {
     val events = mutableListOf(
         Event(title = "Wake up", description = "Time to get up", daypart = Daypart.MORNING, durationInMinutes = 0),
@@ -20,4 +27,5 @@ fun main() {
         println("$daypart: ${events.size} events")
     }
     println("Last event of the day: ${events.last().title}")
+    println("Duration of first event of the day: ${events[0].durationOfEvent}")
 }
