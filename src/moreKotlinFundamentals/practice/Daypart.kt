@@ -1,6 +1,6 @@
 package moreKotlinFundamentals.practice
 
-enum class DayPart {
+enum class Daypart {
     MORNING,
     AFTERNOON,
     EVENING,
