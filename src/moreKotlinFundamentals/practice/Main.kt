@@ -11,4 +11,6 @@ fun main() {
     );
 
     println("Total events: ${events.size}");
+    val shortEvents = events.filter { it.durationInMinutes < 60 }.size
+    println("You have $shortEvents short events");
 }
